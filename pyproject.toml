@@ -1,0 +1,15 @@
+[project]
+name = "temporal-s3-python"
+version = "0.1.0"
+requires-python = ">=3.10"
+dependencies = [
+    "temporalio",
+]
+
+[project.scripts]
+worker = "worker.main:run"
+client = "client.main:run"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["app*", "worker*", "client*"]
